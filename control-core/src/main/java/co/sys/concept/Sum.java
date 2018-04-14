@@ -1,4 +1,4 @@
-package co.sys.concept.adt.state.type;
+package co.sys.concept;
 
 import java.util.Optional;
 import java.util.function.Function;

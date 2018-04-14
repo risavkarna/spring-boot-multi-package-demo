@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springBootVersion = '2.0.0.RELEASE'
+		springBootVersion = '2.0.1.RELEASE'
 	}
 
 	repositories {
@@ -17,7 +17,7 @@ subprojects {
 	apply plugin: 'java'
 	apply plugin: 'io.spring.dependency-management'
 
-	group = 'io.github.vpavic'
+	group = 'co.sys'
 	sourceCompatibility = 1.8
 
 	repositories {

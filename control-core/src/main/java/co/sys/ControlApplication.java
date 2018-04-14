@@ -9,15 +9,15 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
-public class CoontrolApp extends SpringBootServletInitializer {
+public class ControlApplication extends SpringBootServletInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-		return builder.sources(CoontrolApp.class);
+		return builder.sources(ControlApplication.class);
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(CoontrolApp.class, args);
+		SpringApplication.run(ControlApplication.class, args);
 	}
 
 	@Configuration
