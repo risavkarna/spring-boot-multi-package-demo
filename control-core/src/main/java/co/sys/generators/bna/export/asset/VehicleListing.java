@@ -3,7 +3,7 @@ package co.sys.generators.bna.export.asset;
 import co.sys.concept.Concept;
 import co.sys.generators.bna.export.concept.ListingState;
 import co.sys.generators.bna.export.transaction.Offer;
-import co.sys.generators.bna.meta.Relationship;
+import co.sys.concept.env.Relationships;
 import com.fasterxml.jackson.annotation.JsonTypeId;
 import org.springframework.lang.NonNull;
 import org.springframework.lang.Nullable;
@@ -26,7 +26,7 @@ public class VehicleListing extends Concept implements Concept.Atom<VehicleListi
     private Offer[] offers;
 
     @Nullable
-    private Relationship<Concept.Atom<?>> relations;
+    private Relationships relations;
 
     @Override
     public VehicleListing value() {
@@ -58,18 +58,18 @@ public class VehicleListing extends Concept implements Concept.Atom<VehicleListi
     }
 
     public Vehicle getVehicle() {
-        return (Vehicle) relations.getOthers().get(Vehicle.class.getTypeName());
+        return (Vehicle) relations.getAll().get(Vehicle.class.getTypeName());
     }
 
     public Vehicle setVehicle(Vehicle member) {
-        return (Vehicle) this.relations.getOthers().put(Vehicle.class.getTypeName(), member);
+        return (Vehicle) this.relations.getAll().put(Vehicle.class.getTypeName(), member);
     }
 
-    public void setRelations(Relationship<Concept.Atom<?>> relations) {
+    public void setRelations(Relationships relations) {
         this.relations = relations;
     }
 
-    public Relationship<Concept.Atom<?>> getRelations() {
+    public Relationships getRelations() {
         return relations;
     }
 

@@ -2,7 +2,7 @@ package co.sys.generators.bna.export.asset;
 
 import co.sys.concept.Concept;
 import co.sys.generators.bna.export.participant.Member;
-import co.sys.generators.bna.meta.Relationship;
+import co.sys.concept.env.Relationships;
 import com.fasterxml.jackson.annotation.JsonTypeId;
 import org.springframework.lang.NonNull;
 import org.springframework.lang.Nullable;
@@ -16,7 +16,7 @@ public class Vehicle extends Concept implements Concept.Atom<Vehicle> {
     private Integer year;
 
     @Nullable
-    private Relationship<Concept.Atom<?>> relations;
+    private Relationships relations;
 
     public Vehicle(String vin, Integer year) {
         this.vin = vin;
@@ -30,18 +30,18 @@ public class Vehicle extends Concept implements Concept.Atom<Vehicle> {
     }
 
     public Member getOwner() {
-        return (Member) this.relations.getOthers().get(Member.class.getTypeName());
+        return (Member) this.relations.getAll().get(Member.class.getTypeName());
     }
 
     public Member setOwner(Member member) {
-        return (Member) this.relations.getOthers().put(Member.class.getTypeName(), member);
+        return (Member) this.relations.getAll().put(Member.class.getTypeName(), member);
     }
 
-    private Relationship<Concept.Atom<?>> getRelations() {
+    private Relationships getRelations() {
         return relations;
     }
 
-    private void setRelations(Relationship<Concept.Atom<?>> relations) {
+    private void setRelations(Relationships relations) {
         this.relations = relations;
     }
 

@@ -4,38 +4,50 @@ import co.sys.concept.env.Control;
 import co.sys.generators.bna.export.asset.Vehicle;
 import co.sys.generators.bna.export.asset.VehicleListing;
 import co.sys.generators.bna.export.participant.Member;
-import co.sys.generators.bna.meta.Relationship;
+import co.sys.concept.env.Attributes;
+import co.sys.concept.env.Relationships;
 import org.springframework.lang.Nullable;
 
 public class Offer extends Control {
 
-    private Double bidPrice;
+    private static final String BID_PRICE = "bidPrice";
+
+    // private Double bidPrice;
+    private Attributes attributes;
 
     @Nullable
-    private Relationship<Atom<?>> relations;
+    private Relationships relations;
 
     public VehicleListing getVehicleListing() {
-        return (VehicleListing) relations.getOthers().get(VehicleListing.class.getTypeName());
+        return (VehicleListing) relations.getAll().get(VehicleListing.class.getTypeName());
     }
 
     public Vehicle setVehicleListing(VehicleListing member) {
-        return (Vehicle) this.relations.getOthers().put(VehicleListing.class.getTypeName(), member);
+        return (Vehicle) this.relations.getAll().put(VehicleListing.class.getTypeName(), member);
     }
 
     public Member getMember() {
-        return (Member) this.relations.getOthers().get(Member.class.getTypeName());
+        return (Member) this.relations.getAll().get(Member.class.getTypeName());
     }
 
     public Member setMember(Member member) {
-        return (Member) this.relations.getOthers().put(Member.class.getTypeName(), member);
+        return (Member) this.relations.getAll().put(Member.class.getTypeName(), member);
+    }
+
+    public Double getBidPrice() {
+        return (Double) this.attributes.getAll().get(BID_PRICE);
+    }
+
+    public void setBidPrice(Double bidPrice) {
+        this.attributes.update(BID_PRICE, bidPrice);
     }
 
     public Offer(Double bidPrice) {
-        this.bidPrice = bidPrice;
+        this.attributes.add(BID_PRICE, bidPrice);
     }
 
     public Offer(Double bidPrice, VehicleListing vehicleListing, Member member) {
-        this.bidPrice = bidPrice;
+        this.attributes.add(BID_PRICE, bidPrice);
         this.relations.add(vehicleListing);
         this.relations.add(member);
     }
