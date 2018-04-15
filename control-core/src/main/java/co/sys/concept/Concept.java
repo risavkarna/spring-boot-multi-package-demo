@@ -14,6 +14,11 @@ public abstract class Concept {
 
     public interface Atom<E> {
         E value();
+        String identifiedBy();
+    }
+
+    public interface Related<X, Y> {
+
     }
 
     public interface Compound<A, M> {
