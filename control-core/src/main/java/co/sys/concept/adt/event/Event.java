@@ -1,4 +1,6 @@
 package co.sys.concept.adt.event;
 
-public abstract class Event {
+import co.sys.concept.Concept;
+
+public abstract class Event extends Concept{
 }

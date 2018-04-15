@@ -1,10 +1,11 @@
 package co.sys.concept.adt.context;
 
-import co.sys.concept.Sum;
+import co.sys.concept.Concept;
+import co.sys.concept.env.Sum;
 
 import java.util.Optional;
 
-public abstract class Context {
+public abstract class Context extends Concept{
 
 	public abstract Sum getMapOrSum();
 

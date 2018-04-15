@@ -1,7 +1,8 @@
 package co.sys.concept.adt.context;
 
-import co.sys.concept.i.Compound;
-import co.sys.concept.Sum;
+import co.sys.concept.env.space.Compound;
+import co.sys.concept.env.Sum;
+import co.sys.util.Patterns;
 
 import java.util.Map;
 import java.util.Optional;
@@ -15,6 +16,7 @@ public class ContextCompound<Event, State> extends Context implements Compound<E
 		return mapOrSum;
 	}
 
+	@Override
 	public void setMapOrSum(Sum<Map<Event, State>, Sum<Event, State>> mapOrSum) {
 		this.mapOrSum = mapOrSum;
 	}
@@ -50,23 +52,23 @@ public class ContextCompound<Event, State> extends Context implements Compound<E
 
 
 	@Override
-	public Optional<? super Map<Event, State>> getCompound() {
+	public Optional<Map<Event, State>> getCompound() {
 		return mapOrSum.fromLeft();
 	}
 
 	@Override
-	public Compound set(Compound<Event, State> compound) {
-		throw new UnsupportedOperationException();
+	public co.sys.concept.env.space.Compound set(co.sys.concept.env.space.Compound<Event, State> compound) {
+		throw Patterns.unsupported();
 	}
 
 	@Override
-	public Compound set(Map<Event, State> m) {
-		throw new UnsupportedOperationException();
+	public ContextCompound set(Map<Event, State> m) {
+		throw Patterns.unsupported();
 	}
 
 	@Override
-	public Compound set(Sum<Map<Event, State>, Sum<Event, State>> f) {
-		throw new UnsupportedOperationException();
+	public ContextCompound set(Sum<Map<Event, State>, Sum<Event, State>> f) {
+		throw Patterns.unsupported();
 	}
 
 

@@ -1,6 +1,6 @@
 package co.sys.agent.control;
 
-import co.sys.agent.concept.AgentControlConcept;
+import co.sys.concept.env.Control;
 
-public abstract class AgentControl extends AgentControlConcept {
+public abstract class AgentControl extends Control {
 }

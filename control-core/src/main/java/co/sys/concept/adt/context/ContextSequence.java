@@ -1,6 +1,6 @@
 package co.sys.concept.adt.context;
 
-import co.sys.concept.i.Sequence;
+import co.sys.concept.env.space.Sequence;
 
 import java.util.LinkedHashMap;
 

@@ -1,6 +1,6 @@
 package co.sys.agent.type.device.capability;
 
-import co.sys.agent.type.device.concept.CapabilityConcept;
+import co.sys.agent.capability.AgentCapability;
 
-public abstract class Capability extends CapabilityConcept{
+public abstract class Capability extends AgentCapability {
 }

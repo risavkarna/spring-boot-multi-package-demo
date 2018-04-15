@@ -1,5 +1,5 @@
 package co.sys.agent;
 
-import co.sys.agent.concept.AgentConcept;
+import co.sys.concept.Concept;
 
-public abstract class Agent extends AgentConcept {}
+public abstract class Agent extends Concept {}

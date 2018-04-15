@@ -1,6 +1,6 @@
 package co.sys.agent.type.guide.control;
 
-import co.sys.agent.type.guide.concept.ControlConcept;
+import co.sys.agent.control.AgentControl;
 
-public abstract class Control extends ControlConcept {
+public abstract class Control extends AgentControl {
 }

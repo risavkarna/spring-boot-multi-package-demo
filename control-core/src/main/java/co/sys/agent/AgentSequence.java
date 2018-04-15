@@ -1,8 +1,8 @@
 package co.sys.agent;
 
-import co.sys.concept.i.Sequence;
 
 import java.util.LinkedHashMap;
+import co.sys.concept.env.space.Sequence;
 
 public abstract class AgentSequence<Agent, AgentCompound> implements Sequence<Agent, AgentCompound> {
 

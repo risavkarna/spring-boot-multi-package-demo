@@ -1,6 +1,6 @@
 package co.sys.agent.type.device;
 
-import co.sys.agent.type.device.concept.Concept;
+import co.sys.agent.Agent;
 
-public class Device extends Concept {
+public class Device extends Agent {
 }

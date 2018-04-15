@@ -1,6 +1,6 @@
 package co.sys.agent.schedule;
 
-import co.sys.agent.concept.AgentScheduleConcept;
+import co.sys.concept.env.Schedule;
 
-public abstract class AgentSchedule extends AgentScheduleConcept {
+public abstract class AgentSchedule extends Schedule {
 }

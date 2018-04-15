@@ -1,6 +1,6 @@
 package co.sys.agent.capability;
 
-import co.sys.agent.concept.AgentCapabilityConcept;
+import co.sys.concept.env.Capability;
 
-public abstract class AgentCapability extends AgentCapabilityConcept {
+public abstract class AgentCapability extends Capability {
 }

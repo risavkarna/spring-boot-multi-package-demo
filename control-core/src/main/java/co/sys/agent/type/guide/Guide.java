@@ -1,6 +1,6 @@
 package co.sys.agent.type.guide;
 
-import co.sys.agent.type.guide.concept.Concept;
+import co.sys.agent.Agent;
 
-public class Guide extends Concept {
+public class Guide extends Agent {
 }

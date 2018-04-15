@@ -1,4 +1,6 @@
 package co.sys.concept.adt.state;
 
-public abstract class State {
+import co.sys.concept.Concept;
+
+public abstract class State extends Concept{
 }
