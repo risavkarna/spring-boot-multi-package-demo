@@ -1,4 +1,4 @@
-**<h3>Step 1. Agent based Control structures</h3>**
+**<h3>M 1. Agent based Control structures</h3>**
 
 'Don't just control it, [Co]control it'
 
@@ -66,7 +66,7 @@ or, skip user interactions entirely and just provide capabilities and their sche
 
 For this we will need to hide all the internal complexity and latencies in the multi-server network.<br/>
 
-**<h3>Unified Access Interface</h3>**
+**<h3>M 2. Unified Access Interface</h3>**
 
 For a unified API we need
 
@@ -84,6 +84,16 @@ For a unified API we need
 
 But 'blockchain' is just one of the small pieces. <br/>
 One can **generate a unified access interface and the single source of truth for any organization's network**.
+
+**<h3>M 3. Separation of caching,  persistence and business logic</h3>**
++(ttl, ssot snapshots standards)
+
+**<h3>M 4. Exchanging annotated abstract codes instead of just static assets</h3>**
++(BNA, smart contract standards)
+
+**<h3>M 5. Agent driven, supervised  state machines</h3>**
++(e.g. interceptors instead of long polling, supervised state transitions)
+
 
 
 #### Spring Boot multi-package control
