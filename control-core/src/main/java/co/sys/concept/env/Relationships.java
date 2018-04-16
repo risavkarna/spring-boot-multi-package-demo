@@ -5,35 +5,25 @@ import co.sys.concept.Concept;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Relationships {
-
-    private Map<String, Object> all;
+public class Relationships extends Concept.Component<Relationships>{
 
     public Relationships(Map<String, Object> all) {
-        this.all = all;
+        this.setAll(all);
     }
 
     public Relationships() {
-        this.all = new HashMap<>();
-    }
-
-    public Map<String, Object> getAll() {
-        return all;
-    }
-
-    public void setAll(Map<String, Object> all) {
-        this.all = all;
+        this.setAll(new HashMap<>());
     }
 
     public Relationships add(Concept.Atom<?> item) {
-        if (!all.containsKey(item.value().getClass().getTypeName())) {
-            all.put(item.value().getClass().getTypeName(), item.value());
+        if (!this.getAll().containsKey(key(item.value().getClass().getTypeName()))) {
+            put(key(item.value().getClass().getTypeName()), item.value());
         }
         return this;
     }
 
     public Relationships remove(Concept.Atom<?> item) {
-        all.remove(item.value().getClass().getTypeName());
+        this.getAll().remove(item.value().getClass().getTypeName());
         return this;
     }
 }
