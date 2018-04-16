@@ -22,8 +22,7 @@ The interface simply asks for
 
 Examples:
 
-**Level 1.** One or more devices in a Xmedia collection: cabin/SM groups/parental control can be configured by a manager by writing a statement like:
-
+**Level 1.** One or more devices in a collection can be configured by a manager by writing a statement like:
 
 ```TVs[pax, quarantine, location-deck] play[multicast, udp://239.11.21.23:4000] as myCurrentChannel```
 
@@ -34,9 +33,9 @@ Examples:
 
 **Level 2.** Besides ```play[multicast]``` you could add
 
-```concurrent_run[muting_service, volume_manager, internet_plans_service]```<br/>
-```run[clean[logs]]```<br/>
-```test[connection] between[TV, LGServer] test-command-list```
+```run[muting_service, volume_manager, internet_plans_service]```<br/>
+```clean[logs]```<br/>
+```test[connection[test-command-list] between[TV, LGServer]]```
 
 **Level 3.** Besides verb controls with noun services, allow piping processes to temporal schedulers like
 
@@ -48,7 +47,7 @@ Examples:
 ```TVs play[mustering-channel-3 | when[emergency-alert-!]]```<br/>
 ```TVs display[app-survey | after[event-shorex]]```<br/>
 ```TV display[app-payments | after[casino-visit]]```<br/>
-```TV reserve[ SUPPER for[dinner] for[2] | at[2100] every[day]]```<br/>
+```TV reserve[LAUFAUF for[dinner] for[2] | every[day at[2100]]]```<br/>
 
 
 <h4>API Interactions:</h4>
@@ -58,7 +57,7 @@ Examples:
 
 After typing the id of an agent or an agent group, a control or group of controls are shown.<br/>
 After selecting the controls, an advanced user may still choose to specify capabilities specifically <br/>
-or, skip user interactions entirely and just provide capabilities and their schedules
+or, skip user interactions entirely and just provide capabilities and their schedules.
 
 **Capabilities are derived from controls and controls and controls are derived from agents.** 
 
@@ -67,9 +66,9 @@ or, skip user interactions entirely and just provide capabilities and their sche
 
 For this we will need to hide all the internal complexity and latencies in the multi-server network.<br/>
 
-**<h3>Unified API interface</h3>**
+**<h3>Unified Access Interface</h3>**
 
-For a unified API interface we need
+For a unified API we need
 
 **- a separation of concerns between business logic, caching and persistence**
 
@@ -81,7 +80,7 @@ For a unified API interface we need
 
 **- a network as concepts**
 
-**Showcase**: Composing business-ready, smart contracts, permissions and identification based blockchain network applications on the fly.
+**Demo Showcase**: Composing business-ready, smart contracts, permissions and identification based blockchain network applications on the fly.
 
 But 'blockchain' is just one of the small pieces. <br/>
 One can **generate a unified access interface and the single source of truth for any organization's network**.
