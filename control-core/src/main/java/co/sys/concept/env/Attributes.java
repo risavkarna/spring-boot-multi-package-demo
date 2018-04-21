@@ -1,26 +1,18 @@
 package co.sys.concept.env;
 
+import co.sys.concept.Concept;
+
 import java.util.HashMap;
 import java.util.Map;
 
-public class Attributes {
-
-    private Map<String, Object> all;
+public class Attributes extends Concept.Component<Attributes>{
 
     public Attributes(Map<String, Object> all) {
-        this.all = all;
+        this.setAll(all);
     }
 
     public Attributes() {
-        this.all = new HashMap<>();
-    }
-
-    public Map<String, Object> getAll() {
-        return all;
-    }
-
-    public void setAll(Map<String, Object> all) {
-        this.all = all;
+        this.setAll(new HashMap<>());
     }
 
     public Attributes add(Object item) {
@@ -28,28 +20,40 @@ public class Attributes {
     }
 
     public Attributes update(String key, Object item) {
-        all.put(key, item);
+        put(key, item);
         return this;
     }
 
     public Object get(String item) {
-        return all.get(item);
+        return this.getAll().get(item);
     }
 
     public Attributes add(String key, Object item) {
-        if (!all.containsKey(key)) {
+        if (!this.getAll().containsKey(key)) {
             return update(key, item);
         }
         return this;
     }
 
     public Attributes remove(Object item) {
-        all.remove(item.getClass().getTypeName());
+        this.getAll().remove(item.getClass().getTypeName());
         return this;
     }
 
     public Attributes remove(String key) {
-        all.remove(key);
+        this.getAll().remove(key);
+        return this;
+    }
+
+    public Attributes add(Concept.Atom<?> item) {
+        if (!this.getAll().containsKey(key(item.value().getClass().getTypeName()))) {
+            put(key(item.value().getClass().getTypeName()), item.value());
+        }
+        return this;
+    }
+
+    public Attributes remove(Concept.Atom<?> item) {
+        this.getAll().remove(item.value().getClass().getTypeName());
         return this;
     }
 
