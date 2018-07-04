@@ -1,0 +1,16 @@
+{
+  "name": "spring-boot-multi-package-demo",
+  "description": "core persistence layer",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
