@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<beans
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                        http://www.springframework.org/schema/context
+                        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+    <bean class="co.sys.generators.xres.interfaces.Availabilities" scope="cucumber-glue" />
+    <bean class="co.sys.generators.xres.interfaces.EventInterface" scope="cucumber-glue" />
+    <bean class="co.sys.generators.xres.interfaces.Reservations" scope="cucumber-glue" />
+    <bean class="co.sys.generators.xres.interfaces.RestaurantInterface" scope="cucumber-glue" />
+    <bean class="co.sys.generators.xres.interfaces.SystemTemplates" scope="cucumber-glue" />
+    <bean class="co.sys.generators.xres.interfaces.XresWebDriver" scope="cucumber-glue" />
+
+    <context:annotation-config />
+    <context:component-scan
+        base-package = "co.sys.generators.xres co.sys.generators.xres.interfaces" />
+</beans>

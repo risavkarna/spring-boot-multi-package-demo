@@ -6,8 +6,9 @@ import co.sys.generators.xres.dto.ManagementDTO;
 import co.sys.generators.xres.lambdas.Bookable;
 import co.sys.generators.xres.lambdas.Configurable;
 import co.sys.generators.xres.lambdas.Manageable;
+import co.sys.generators.xres.service.Service;
 
-public class Event implements Manageable<Event>, Bookable, Configurable {
+public class Event extends Service<Event> implements Manageable<Event>, Bookable, Configurable {
 
 	@Override
 	public Booking book(BookingDTO bookingDTO) {

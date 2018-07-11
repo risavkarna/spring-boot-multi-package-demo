@@ -4,8 +4,9 @@ import co.sys.generators.xres.dto.ConfigurationDTO;
 import co.sys.generators.xres.dto.ManagementDTO;
 import co.sys.generators.xres.lambdas.Configurable;
 import co.sys.generators.xres.lambdas.Manageable;
+import co.sys.generators.xres.service.Service;
 
-public class Availability implements Manageable<Availability>, Configurable {
+public class Availability extends Service<Availability> implements Manageable<Availability>, Configurable {
 
 	@Override
 	public Availability manage(ManagementDTO<Availability> managementDTO) {

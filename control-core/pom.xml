@@ -37,10 +37,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <!--<java.version>1.9</java.version>-->
-        <!--<spring-cloud-task.version>2.0.0.BUILD-SNAPSHOT</spring-cloud-task.version>-->
-        <!--<spring-cloud.version>Finchley.BUILD-SNAPSHOT</spring-cloud.version>-->
-        <spring-statemachine.version>2.0.1.RELEASE</spring-statemachine.version>
+        <cucumber.version>1.2.5</cucumber.version>
     </properties>
 
     <build>
@@ -70,31 +67,6 @@
                         </execution>
                     </executions>
                 </plugin>
-                <!--<plugin>-->
-                    <!--<groupId>org.apache.maven.plugins</groupId>-->
-                    <!--<artifactId>maven-gpg-plugin</artifactId>-->
-                    <!--<executions>-->
-                        <!--<execution>-->
-                            <!--<id>sign-artifacts</id>-->
-                            <!--<phase>verify</phase>-->
-                            <!--<goals>-->
-                                <!--<goal>sign</goal>-->
-                            <!--</goals>-->
-                        <!--</execution>-->
-                    <!--</executions>-->
-                <!--</plugin>-->
-
-
-                <!--<plugin>-->
-                    <!--<groupId>org.apache.maven.plugins</groupId>-->
-                    <!--<artifactId>maven-release-plugin</artifactId>-->
-                    <!--<version>2.1</version>-->
-                    <!--<configuration>-->
-                        <!--<mavenExecutorId>forked-path</mavenExecutorId>-->
-                        <!--<useReleaseProfile>false</useReleaseProfile>-->
-                        <!--<arguments>${arguments} -Psonatype-oss-release</arguments>-->
-                    <!--</configuration>-->
-                <!--</plugin>-->
 
                 <plugin>
                     <groupId>org.apache.cayenne.plugins</groupId>
@@ -149,18 +121,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-batch</artifactId>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter-cache</artifactId>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter-data-neo4j</artifactId>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
@@ -224,53 +188,11 @@
             <version>4.0.RC1</version>
         </dependency>
 
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.cloud</groupId>-->
-            <!--<artifactId>spring-cloud-config-server</artifactId>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.cloud</groupId>-->
-            <!--<artifactId>spring-cloud-starter-config</artifactId>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.cloud</groupId>-->
-            <!--<artifactId>spring-cloud-starter-oauth2</artifactId>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.cloud</groupId>-->
-            <!--<artifactId>spring-cloud-starter-task</artifactId>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.cloud</groupId>-->
-            <!--<artifactId>spring-cloud-stream-reactive</artifactId>-->
-        <!--</dependency>-->
-
-
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.data</groupId>-->
-            <!--<artifactId>spring-data-rest-hal-browser</artifactId>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>org.springframework.session</groupId>
             <artifactId>spring-session-data-redis</artifactId>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.statemachine</groupId>-->
-            <!--<artifactId>spring-statemachine-starter</artifactId>-->
-        <!--</dependency>-->
 
-        <!-- https://mvnrepository.com/artifact/org.javalite/activejdbc -->
-        <dependency>
-            <groupId>org.javalite</groupId>
-            <artifactId>activejdbc</artifactId>
-            <version>2.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <scope>runtime</scope>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
@@ -281,37 +203,6 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.projectreactor</groupId>
-            <artifactId>reactor-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.batch</groupId>
-            <artifactId>spring-batch-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.cloud</groupId>-->
-            <!--<artifactId>spring-cloud-stream-test-support</artifactId>-->
-            <!--<scope>test</scope>-->
-        <!--</dependency>-->
-        <dependency>
-            <groupId>org.springframework.restdocs</groupId>
-            <artifactId>spring-restdocs-mockmvc</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
 
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -336,12 +227,6 @@
             <artifactId>java-object-diff</artifactId>
             <version>0.95</version>
         </dependency>
-
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.integration</groupId>-->
-            <!--<artifactId>spring-integration-core</artifactId>-->
-            <!--<version>4.2.5.RELEASE</version>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>org.zeromq</groupId>
             <artifactId>jeromq</artifactId>
@@ -357,11 +242,68 @@
             <artifactId>jackson-databind</artifactId>
             <version>2.5.1</version>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.msgpack</groupId>-->
-            <!--<artifactId>msgpack</artifactId>-->
-            <!--<version>0.6.10</version>-->
-        <!--</dependency>-->
+        <!--fun stuff-->
+
+
+
+        <!--PERSISTENCE-->
+
+        <!-- https://mvnrepository.com/artifact/org.javalite/activejdbc -->
+        <dependency>
+            <groupId>org.javalite</groupId>
+            <artifactId>activejdbc</artifactId>
+            <version>2.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!--PERSISTENCE-->
+
+        <!--TEST FRAMEWORKS and LIBRARIES-->
+
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-spring</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.13.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.batch</groupId>
+            <artifactId>spring-batch-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.restdocs</groupId>
+            <artifactId>spring-restdocs-mockmvc</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-test</artifactId>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -376,33 +318,17 @@
         </dependency>
 
 
-    </dependencies>
+        <dependency>
+            <groupId>org.fluttercode.datafactory</groupId>
+            <artifactId>datafactory</artifactId>
+            <version>0.8</version>
+            <type>jar</type>
+        </dependency>
 
-    <dependencyManagement>
-        <dependencies>
-            <!--<dependency>-->
-                <!--<groupId>org.springframework.cloud</groupId>-->
-                <!--<artifactId>spring-cloud-task-dependencies</artifactId>-->
-                <!--<version>${spring-cloud-task.version}</version>-->
-                <!--<type>pom</type>-->
-                <!--<scope>import</scope>-->
-            <!--</dependency>-->
-            <!--<dependency>-->
-                <!--<groupId>org.springframework.cloud</groupId>-->
-                <!--<artifactId>spring-cloud-dependencies</artifactId>-->
-                <!--<version>${spring-cloud.version}</version>-->
-                <!--<type>pom</type>-->
-                <!--<scope>import</scope>-->
-            <!--</dependency>-->
-            <dependency>
-                <groupId>org.springframework.statemachine</groupId>
-                <artifactId>spring-statemachine-bom</artifactId>
-                <version>${spring-statemachine.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+
+        <!--TEST FRAMEWORKS and LIBRARIES-->
+
+    </dependencies>
 
     <repositories>
         <repository>

@@ -6,8 +6,9 @@ import co.sys.generators.xres.dto.ManagementDTO;
 import co.sys.generators.xres.lambdas.Bookable;
 import co.sys.generators.xres.lambdas.Configurable;
 import co.sys.generators.xres.lambdas.Manageable;
+import co.sys.generators.xres.service.Service;
 
-public class Restaurant implements Manageable<Restaurant>, Bookable, Configurable {
+public class Restaurant extends Service<Restaurant> implements Manageable<Restaurant>, Bookable, Configurable {
 
 	@Override
 	public Booking book(BookingDTO bookingDTO) {
