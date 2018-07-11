@@ -97,6 +97,12 @@
                 <!--</plugin>-->
 
                 <plugin>
+                    <groupId>org.apache.cayenne.plugins</groupId>
+                    <artifactId>maven-cayenne-modeler-plugin</artifactId>
+                    <version>4.0.M5</version>
+                </plugin>
+
+                <plugin>
                     <artifactId>maven-deploy-plugin</artifactId>
                     <version>2.8.2</version>
                     <executions>
@@ -143,18 +149,18 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-batch</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-cache</artifactId>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-cache</artifactId>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-neo4j</artifactId>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-data-neo4j</artifactId>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
@@ -212,6 +218,12 @@
             <artifactId>flyway-core</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.cayenne</groupId>
+            <artifactId>cayenne-server</artifactId>
+            <version>4.0.RC1</version>
+        </dependency>
+
         <!--<dependency>-->
             <!--<groupId>org.springframework.cloud</groupId>-->
             <!--<artifactId>spring-cloud-config-server</artifactId>-->
@@ -234,10 +246,10 @@
         <!--</dependency>-->
 
 
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-rest-hal-browser</artifactId>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.data</groupId>-->
+            <!--<artifactId>spring-data-rest-hal-browser</artifactId>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.springframework.session</groupId>
             <artifactId>spring-session-data-redis</artifactId>
@@ -247,7 +259,12 @@
             <!--<artifactId>spring-statemachine-starter</artifactId>-->
         <!--</dependency>-->
 
-
+        <!-- https://mvnrepository.com/artifact/org.javalite/activejdbc -->
+        <dependency>
+            <groupId>org.javalite</groupId>
+            <artifactId>activejdbc</artifactId>
+            <version>2.0</version>
+        </dependency>
 
         <dependency>
             <groupId>org.postgresql</groupId>
@@ -320,11 +337,11 @@
             <version>0.95</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.integration</groupId>
-            <artifactId>spring-integration-core</artifactId>
-            <version>4.2.5.RELEASE</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.integration</groupId>-->
+            <!--<artifactId>spring-integration-core</artifactId>-->
+            <!--<version>4.2.5.RELEASE</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.zeromq</groupId>
             <artifactId>jeromq</artifactId>
@@ -340,11 +357,11 @@
             <artifactId>jackson-databind</artifactId>
             <version>2.5.1</version>
         </dependency>
-        <dependency>
-            <groupId>org.msgpack</groupId>
-            <artifactId>msgpack</artifactId>
-            <version>0.6.10</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.msgpack</groupId>-->
+            <!--<artifactId>msgpack</artifactId>-->
+            <!--<version>0.6.10</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
