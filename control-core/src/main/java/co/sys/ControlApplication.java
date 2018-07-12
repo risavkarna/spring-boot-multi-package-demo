@@ -25,7 +25,7 @@ public class ControlApplication extends SpringBootServletInitializer {
 
 		@Override
 		public void addViewControllers(ViewControllerRegistry registry) {
-			registry.addViewController("/").setViewName("home");
+			registry.addViewController("/").setViewName("forward:/src/index.html");
 		}
 
 	}
