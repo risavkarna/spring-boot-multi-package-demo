@@ -1,12 +1,12 @@
 package co.sys.generators.xres;
 
+import co.sys.generators.xres.control.Controller;
 import co.sys.generators.xres.dto.ConfigurationDTO;
 import co.sys.generators.xres.dto.ManagementDTO;
 import co.sys.generators.xres.lambdas.Configurable;
 import co.sys.generators.xres.lambdas.Manageable;
-import co.sys.generators.xres.service.Service;
 
-public class Booking extends Service<Booking> implements Manageable<Booking>, Configurable {
+public class Booking extends Controller<Booking> implements Manageable<Booking>, Configurable {
 
 	@Override
 	public System configure(ConfigurationDTO configurationDTO) {

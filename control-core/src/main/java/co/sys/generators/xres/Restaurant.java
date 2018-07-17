@@ -1,14 +1,14 @@
 package co.sys.generators.xres;
 
+import co.sys.generators.xres.control.Controller;
 import co.sys.generators.xres.dto.BookingDTO;
 import co.sys.generators.xres.dto.ConfigurationDTO;
 import co.sys.generators.xres.dto.ManagementDTO;
 import co.sys.generators.xres.lambdas.Bookable;
 import co.sys.generators.xres.lambdas.Configurable;
 import co.sys.generators.xres.lambdas.Manageable;
-import co.sys.generators.xres.service.Service;
 
-public class Restaurant extends Service<Restaurant> implements Manageable<Restaurant>, Bookable, Configurable {
+public class Restaurant extends Controller<Restaurant> implements Manageable<Restaurant>, Bookable, Configurable {
 
 	@Override
 	public Booking book(BookingDTO bookingDTO) {
