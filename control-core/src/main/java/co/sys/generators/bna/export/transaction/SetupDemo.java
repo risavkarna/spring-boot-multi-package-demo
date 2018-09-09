@@ -1,8 +1,8 @@
 package co.sys.generators.bna.export.transaction;
 
-import co.sys.concept.patterns.models.adt.entities.Attributes;
-import co.sys.concept.patterns.models.adt.entities.Relationships;
-import co.sys.concept.patterns.models.adt.entities.Transaction;
+import co.sys.concept.patterns.things.adt.entities.Attributes;
+import co.sys.concept.patterns.things.adt.entities.Relationships;
+import co.sys.concept.patterns.things.adt.entities.Transaction;
 
 public class SetupDemo<B> extends Transaction<B> {
 

@@ -1,11 +1,11 @@
 package co.sys.generators.bna.export.transaction;
 
-import co.sys.concept.patterns.models.adt.entities.Control;
+import co.sys.concept.patterns.things.adt.entities.Control;
 import co.sys.generators.bna.export.asset.Vehicle;
 import co.sys.generators.bna.export.asset.VehicleListing;
 import co.sys.generators.bna.export.participant.Member;
-import co.sys.concept.patterns.models.adt.entities.Attributes;
-import co.sys.concept.patterns.models.adt.entities.Relationships;
+import co.sys.concept.patterns.things.adt.entities.Attributes;
+import co.sys.concept.patterns.things.adt.entities.Relationships;
 import org.springframework.lang.Nullable;
 
 public class Offer extends Control {

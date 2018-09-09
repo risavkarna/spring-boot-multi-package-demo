@@ -2,7 +2,7 @@ package co.sys.generators.bna.export.asset;
 
 import co.sys.concept.Concept;
 import co.sys.generators.bna.export.participant.Member;
-import co.sys.concept.patterns.models.adt.entities.Relationships;
+import co.sys.concept.patterns.things.adt.entities.Relationships;
 import com.fasterxml.jackson.annotation.JsonTypeId;
 import org.springframework.lang.NonNull;
 import org.springframework.lang.Nullable;
