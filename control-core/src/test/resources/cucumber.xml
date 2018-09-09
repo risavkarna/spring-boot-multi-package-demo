@@ -7,14 +7,14 @@
                         http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
                         http://www.springframework.org/schema/context
                         http://www.springframework.org/schema/context/spring-context-3.0.xsd">
-    <bean class="co.sys.generators.restaurants.interfaces.Availabilities" scope="cucumber-glue" />
-    <bean class="co.sys.generators.restaurants.interfaces.EventInterface" scope="cucumber-glue" />
-    <bean class="co.sys.generators.restaurants.interfaces.Reservations" scope="cucumber-glue" />
-    <bean class="co.sys.generators.restaurants.interfaces.RestaurantInterface" scope="cucumber-glue" />
-    <bean class="co.sys.generators.restaurants.interfaces.SystemTemplates" scope="cucumber-glue" />
-    <bean class="co.sys.generators.restaurants.interfaces.XresWebDriver" scope="cucumber-glue" />
+    <bean class="co.sys.concept.generators.restaurants.interfaces.Availabilities" scope="cucumber-glue" />
+    <bean class="co.sys.concept.generators.restaurants.interfaces.EventInterface" scope="cucumber-glue" />
+    <bean class="co.sys.concept.generators.restaurants.interfaces.Reservations" scope="cucumber-glue" />
+    <bean class="co.sys.concept.generators.restaurants.interfaces.RestaurantInterface" scope="cucumber-glue" />
+    <bean class="co.sys.concept.generators.restaurants.interfaces.SystemTemplates" scope="cucumber-glue" />
+    <bean class="co.sys.concept.generators.restaurants.interfaces.XresWebDriver" scope="cucumber-glue" />
 
     <context:annotation-config />
     <context:component-scan
-        base-package = "co.sys.generators.restaurants co.sys.generators.restaurants.interfaces" />
+        base-package = "co.sys.concept.generators.restaurants co.sys.concept.generators.restaurants.interfaces" />
 </beans>
