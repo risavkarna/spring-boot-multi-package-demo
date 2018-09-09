@@ -1,4 +1,4 @@
-package co.sys.concept.models.adt.env.time;
+package co.sys.concept.patterns.models.adt.entities.env.time;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;

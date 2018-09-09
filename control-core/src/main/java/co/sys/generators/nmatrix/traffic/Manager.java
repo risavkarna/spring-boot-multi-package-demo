@@ -1,6 +1,6 @@
 package co.sys.generators.nmatrix.traffic;
 
-import co.sys.concept.models.agent.Agent;
+import co.sys.concept.patterns.models.agent.Agent;
 
 public class Manager extends Agent {
 

@@ -1,9 +1,9 @@
 package co.sys.generators.bna.export.transaction;
 
-import co.sys.concept.models.adt.entities.Control;
+import co.sys.concept.patterns.models.adt.entities.Control;
 import co.sys.generators.bna.export.asset.Vehicle;
 import co.sys.generators.bna.export.asset.VehicleListing;
-import co.sys.concept.models.adt.entities.Relationships;
+import co.sys.concept.patterns.models.adt.entities.Relationships;
 import org.springframework.lang.Nullable;
 
 public class ReopenListing extends Control {

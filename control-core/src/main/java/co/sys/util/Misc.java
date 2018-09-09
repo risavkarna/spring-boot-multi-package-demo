@@ -1,6 +1,6 @@
 package co.sys.util;
 
-import co.sys.concept.models.adt.entities.Identity;
+import co.sys.concept.patterns.models.adt.entities.Identity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -9,19 +9,19 @@ import java.util.function.Consumer;
 /**
  * Created by rkarna on 11.04.18
  */
-public class Patterns {
+public class Misc {
 
     // via http://stackoverflow.com/a/8592871
     private static final int CLIENT_CODE_STACK_INDEX;
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(Patterns.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(Misc.class);
 
     static {
         // Finds out the index of "this code" in the returned stack trace - funny but it differs in JDK 1.5 and 1.6
         int i = 0;
         for (StackTraceElement ste : Thread.currentThread().getStackTrace()) {
             i++;
-            if (ste.getClassName().equals(Patterns.class.getName())) {
+            if (ste.getClassName().equals(Misc.class.getName())) {
                 break;
             }
         }
@@ -32,7 +32,7 @@ public class Patterns {
         return Thread.currentThread().getStackTrace()[CLIENT_CODE_STACK_INDEX].getMethodName();
     }
 
-    private Patterns() {
+    private Misc() {
     }
 
     public static UnsupportedOperationException unsupported() {
@@ -44,7 +44,7 @@ public class Patterns {
         try {
             o.ifPresent(consumer);
         } catch (Exception e) {
-            LOGGER.error("{} : {}", Patterns.getCurrentMethodName(), e.getMessage());
+            LOGGER.error("{} : {}", Misc.getCurrentMethodName(), e.getMessage());
         }
     }
 }
