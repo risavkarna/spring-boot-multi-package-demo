@@ -1,8 +1,8 @@
 package co.sys.generators.nmatrix.traffic;
 
-import co.sys.agent.Agent;
-import co.sys.concept.env.Attributes;
-import co.sys.concept.env.Relationships;
+import co.sys.concept.models.agent.Agent;
+import co.sys.concept.models.adt.entities.Attributes;
+import co.sys.concept.models.adt.entities.Relationships;
 
 public class User extends Agent {
 

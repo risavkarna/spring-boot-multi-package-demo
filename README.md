@@ -45,7 +45,7 @@ Examples:
 **or causal schedulers like**
 
 ```TVs play[mustering-channel-3 | when[emergency-alert-!]]```<br/>
-```TVs display[app-survey | after[event-shorex]]```<br/>
+```TVs display[app-survey | after[action-shorex]]```<br/>
 ```TV display[app-payments | after[casino-visit]]```<br/>
 ```TV reserve[LAUFAUF for[dinner] for[2] | every[day at[2100]]]```<br/>
 

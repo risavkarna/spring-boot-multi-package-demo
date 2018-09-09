@@ -1,0 +1,45 @@
+package co.sys.concept.models.agent;
+
+
+import java.util.LinkedHashMap;
+import co.sys.concept.models.adt.env.space.Sequence;
+
+public abstract class AgentSequence<Agent, AgentCompound> implements Sequence<Agent, AgentCompound> {
+
+    private LinkedHashMap<Agent, AgentCompound> agents;
+
+    public AgentSequence(LinkedHashMap<Agent, AgentCompound> agents) {
+        this.agents = agents;
+    }
+
+    public AgentSequence() {
+        this.agents = new LinkedHashMap<>();
+    }
+
+    public AgentSequence(Agent agent) {
+        set(agent);
+    }
+
+    @Override
+    public LinkedHashMap<Agent, AgentCompound> get() {
+        return agents;
+    }
+
+    @Override
+    public AgentSequence<Agent, AgentCompound> set(LinkedHashMap<Agent, AgentCompound> agents) {
+        this.agents = agents;
+        return this;
+    }
+
+    @Override
+    public AgentSequence<Agent, AgentCompound> set(Agent agent) {
+        this.agents = new LinkedHashMap<>();
+        this.agents.put(agent, null);
+        return this;
+    }
+
+    @Override
+    public AgentCompound get(Agent agent){
+        return agents.get(agent);
+    }
+}

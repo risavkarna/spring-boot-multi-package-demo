@@ -1,25 +1,25 @@
 package co.sys.generators.nmatrix.traffic;
 
-import co.sys.agent.Agent;
-import co.sys.concept.adt.event.Event;
-import co.sys.concept.env.Attributes;
-import co.sys.concept.env.Relationships;
+import co.sys.concept.models.adt.env.actions.Action;
+import co.sys.concept.models.agent.Agent;
+import co.sys.concept.models.adt.entities.Attributes;
+import co.sys.concept.models.adt.entities.Relationships;
 
 public class Scenario extends Agent {
 
-	private Event event;
+	private Action action;
 
 	private Attributes attributes;
 
 	private Relationships relationships;
 
 
-	public Event getEvent() {
-		return event;
+	public Action getAction() {
+		return action;
 	}
 
-	public void setEvent(Event event) {
-		this.event = event;
+	public void setAction(Action action) {
+		this.action = action;
 	}
 
 	public Attributes getAttributes() {

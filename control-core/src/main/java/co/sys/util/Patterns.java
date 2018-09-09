@@ -1,6 +1,6 @@
 package co.sys.util;
 
-import co.sys.concept.env.Identity;
+import co.sys.concept.models.adt.entities.Identity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

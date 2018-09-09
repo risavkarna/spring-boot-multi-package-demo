@@ -3,7 +3,7 @@ package co.sys.generators.bna.export.asset;
 import co.sys.concept.Concept;
 import co.sys.generators.bna.export.concept.ListingState;
 import co.sys.generators.bna.export.transaction.Offer;
-import co.sys.concept.env.Relationships;
+import co.sys.concept.models.adt.entities.Relationships;
 import com.fasterxml.jackson.annotation.JsonTypeId;
 import org.springframework.lang.NonNull;
 import org.springframework.lang.Nullable;

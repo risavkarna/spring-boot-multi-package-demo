@@ -1,11 +1,8 @@
 package co.sys.concept;
 
-import co.sys.concept.adt.context.Context;
-import co.sys.concept.env.Attributes;
-import co.sys.concept.env.Relationships;
-import co.sys.concept.env.Sum;
+import co.sys.concept.models.adt.env.contexts.Context;
+import co.sys.concept.models.adt.entities.Sum;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -66,11 +63,11 @@ public abstract class Concept {
 
     public interface Compound<A, M> {
 
-        co.sys.concept.env.space.Compound set(co.sys.concept.env.space.Compound<A, M> compound);
+        co.sys.concept.models.adt.env.space.Compound set(co.sys.concept.models.adt.env.space.Compound<A, M> compound);
 
-        co.sys.concept.env.space.Compound set(Map<A, M> m);
+        co.sys.concept.models.adt.env.space.Compound set(Map<A, M> m);
 
-        co.sys.concept.env.space.Compound set(Sum<Map<A, M>, Sum<A, M>> f);
+        co.sys.concept.models.adt.env.space.Compound set(Sum<Map<A, M>, Sum<A, M>> f);
 
         void setMapOrSum(Sum<Map<A, M>, Sum<A, M>> mapOrSum);
 
@@ -84,9 +81,9 @@ public abstract class Concept {
 
         LinkedHashMap<A, C> get();
 
-        co.sys.concept.env.space.Sequence<A,C> set(LinkedHashMap<A, C> hashMap);
+        co.sys.concept.models.adt.env.space.Sequence<A,C> set(LinkedHashMap<A, C> hashMap);
 
-        co.sys.concept.env.space.Sequence<A,C> set(A state);
+        co.sys.concept.models.adt.env.space.Sequence<A,C> set(A state);
 
         C get(A a);
     }
